@@ -22,7 +22,7 @@ public class UserAccountApi {
         this.userAccountService = accountUserService;
     }
 
-    @PostMapping("/create")
+    @PostMapping("/useraccount")
     public ResponseEntity<UserAccount> create(@RequestBody @Valid UserAccountDTO userAccountDTO) throws BankAccountException {
         return ResponseEntity.ok(userAccountService.create(userAccountDTO));
     }
